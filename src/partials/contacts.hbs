@@ -1,0 +1,50 @@
+<section class="section contacts" id="contacts">
+  <div class="contacts__container">
+    <h2 class="section__title">Контактная информация</h2>
+    <p class="section__descr contacts__descr">
+      Оставьте заявку и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время
+    </p>
+
+      <div class="contacts__info row col-12">
+        <div class="col-1"></div>
+        <form class="js-form contacts-form col-5">
+          <div class="contacts-form__wrapper">
+            <div class="contacts__input wrapper__name">
+              
+              <input name="user_name" class="contacts__name" type="text" id="contacts-name" data-type="text" placeholder=" ">
+              <label class="contacts-form__label" for="">Ваше имя</label>
+                <div class="validate__form-error validate__form-error--name js-error js-error-name">
+                  <span>Перепроверьте корректность имени</span>
+                </div>
+            </div>
+            <div class="contacts__input wrapper__phone">
+              
+              <input data-mask="phone" name="user_phone" class="contacts__tel" data-type="phone" type="text" id="contacts-phone" inputmode="text" placeholder=" ">
+              <label class="contacts-form__label" for="">Телефон</label>
+              <div class="validate__form-error validate__form-error--phone js-error js-error-phone">
+                <span>Перепроверьте корректность номера</span>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__btns">
+            <button class="js-form-submit btn btn-reset btn-primary" type="submit">Заказать</button>
+            <p>Нажимая кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих <a href="#">персональных данных</a></p>
+          </div>
+        </form>
+        <div class="col-1"></div>
+        <div class="contacts__details col-4">
+          <a href="#" class="contacts__phone">+7 913 243 80 82</a>
+          <a href="#" class="contacts__email">info@vtorekoresurs.ru</a>
+          <span class="contacts__adress">Барнаул, ул. Попова, 5г</span>
+          <a href="#" class="contacts__map">
+            Смотреть на карте 
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+              <path d="M1 1L8.2 7.3L1 13.6" stroke="#006D33" stroke-width="1.5" stroke-linejoin="bevel"/>
+            </svg>
+          </a>
+        </div>
+        <div class="col-2"></div>
+      </div>
+
+  </div>
+</section>

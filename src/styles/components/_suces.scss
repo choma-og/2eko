@@ -1,0 +1,70 @@
+.suces {
+
+ &__body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  &._active {
+   opacity: 1;
+   visibility: visible;
+  }
+ }
+ &__close {
+  padding: 10px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+ }
+ &__content {
+  position: relative;
+  background-color: #EDFAF8;
+  border-radius: 40px;
+  padding: 80px 50px 100px 80px;
+  width: 764px;
+  display: none;
+  flex-direction: column;
+  @media (max-width:600px) {
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+   padding: 80px 20px 80px 20px;
+   justify-content: center;
+   align-items: flex-start;
+   border-radius: 0px;
+  }
+  &._active {
+   display: flex;
+
+  }
+ }
+ &__text {
+  color: #192D18;
+  font-size: 18px;
+  line-height: 140%;
+  @media (max-width:600px) {
+   font-size: 16px;
+  }
+  &:not(:last-child) {
+   margin-bottom: 6px;
+  }
+ }
+ &__heading {
+  color: var(--color-primary);
+  font-family: "Bebas";
+  font-size: 64px;
+  line-height: 120%;
+  letter-spacing: 1.92px;
+  margin-bottom: 8px;
+ }
+}

@@ -1,0 +1,129 @@
+.about {
+  &__container {
+    position: relative;
+  }
+    @media(max-width:900px) {
+      & .section__descr { 
+        max-width: 590px;
+      }
+      .about__descr {
+        width: 100%;
+      }
+    }
+
+  &-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: -1;
+    @include middledesk {
+      width: 300px;
+    }
+  }
+  &__title {
+    display: block;
+    color: var(--color-primary);
+    font-family: "Bebas";
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.8px;
+    margin-bottom: 90px;
+    @media (max-width:1300px) {
+      margin-bottom: 40px;
+    }
+    @include middledesk {
+      font-size: 40px;
+    }
+    @media (max-width:800px) {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    
+    span {
+      display: block;
+      padding-left: 8%;
+      @include middledesk {
+        padding-left: 5%;
+      }
+    }
+    }
+    &__descr {
+      padding-left: 8%;
+      @include middledesk {
+        padding-left: 5%;
+      }
+    }
+    &__list {
+      display: flex;
+      gap: 40px;
+      @include middledesk {
+        padding-left: 5%;
+        gap: 100px;
+      }
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    &__inner {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    &__value {
+      white-space: nowrap;
+      color: var(--color-accently);
+      font-family: "Bebas";
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 120%;
+    }
+    &__caption {
+      max-width: 150px;
+      font-size: 18px;
+      line-height: 140%;
+    }
+}
+@media (max-width:1300px) {
+  // .row-white {
+  //   display: none;
+  // }
+}
+.section__box {
+  @include middledesk {
+    flex-direction: column;
+    gap: 40px;
+  }
+  @include middlemobile {
+    gap: 20px;
+  }
+}
+@media (max-width:900px) {
+  .trash {
+    width: 140px;
+  }
+  .trash-container {
+    width: 200px;
+  }
+  .about__value {
+    font-size: 30px;
+  }
+  .about__item {
+    gap: 10px;
+  }
+  .about__list {
+    gap: 70px;
+  }
+}
+@media (max-width:600px) {
+  .about__list {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

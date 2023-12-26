@@ -1,0 +1,142 @@
+.services {
+  &__container {
+
+  }
+  & .row {
+    gap: 50px;
+    @include middledesk {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  & .block-info {
+    @media (max-width:600px) {
+      // padding-bottom: 0px;
+      padding-bottom: 20px;
+    }
+  }
+  &__content {
+    overflow: hidden;
+    height: 0;
+    transition: all 0.3s ease 0s;
+    padding: 0px 35px 0px 35px;
+    @include middlemobile {
+      padding: 0px 20px;
+    }
+  }
+  &__heading {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%; /* 22.8px */;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 30px 35px;
+    @include middlemobile {
+      font-size: 14px;
+      padding: 15px 20px;
+      padding-top: 20px;
+    }
+  }
+
+  &__item {
+    background-color: white;
+    border-radius: 20px;
+    // transition: all 0.3s ease 0s;
+    &.acrd-open {
+      background-color: #058842;
+      & .services__heading {
+        color: white;
+      }
+      // & .services__content {
+      //   padding-bottom: 60px;
+      // }
+
+      & .services__arrow svg path {
+        stroke: white;
+      }
+    }
+    
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include middledesk {
+      width: 100%;
+    }
+  }
+  &__price {
+
+  }
+  &__text {
+    color: #FFF;
+    line-height: 130%; /* 20.8px */;
+    padding-bottom: 20px;
+    @include middlemobile {
+      font-size: 12px;
+    }
+  }
+  &__arrow svg{
+    transform: rotate(0deg);
+    transition: all 0.3s ease 0s;
+  }
+  &__arrow svg path{
+    stroke: #192D18;
+    transition: all 0.3s ease 0s;
+  }
+  &__images {
+    margin-right: calc(50% - 50vw + 10px);
+    flex-grow: 1;
+    max-height: 778px;
+    // padding-left: 50px;
+    // margin-right: -55px;
+    @include middledesk {
+      order: -1;
+      width: 100%;
+    }
+  }
+  &__image {
+    position: relative;
+    border-radius: 0px 20px 20px 20px;
+    overflow: hidden;
+    height: 0;
+    padding-top: 65%;
+    display: none;
+    @include middledesk {
+      padding-top: 40%;
+    }
+    @include tablet {
+      padding-top: 50%;
+    }
+    @media (max-width:650px) {
+      padding-top: 60%;
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__exclude {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 2;
+    pointer-events: none;
+    @media (max-width:650px) {
+      width: 100px;
+    }
+    @media (max-width:500px) {
+      width: 70px;
+    }
+  }
+}
+.acrd-open .services__arrow svg {
+  transform: rotate(-180deg);
+  }

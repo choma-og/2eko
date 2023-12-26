@@ -1,0 +1,25 @@
+// базовые подключения
+@import "./settings";
+@import "./mixins";
+@import "./fonts";
+@import "./vars";
+
+// компоненты страницы
+
+// подключения компонентов страницы (большие компоненты)
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/services";
+@import "./components/products";
+@import "./components/advantages";
+@import "./components/reviews";
+@import "./components/questions";
+@import "./components/contacts";
+@import "./components/footer";
+
+// подключения компонентов страницы (маленькие компоненты)
+@import "./components/suces";
+@import "./components/order-service";
+@import "./components/prelodader";
+@import "./components/order-equipment";

@@ -1,0 +1,282 @@
+@import "./vars";
+@import "./mixins/_breakpoint.scss";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+  // max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "GP";
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-text);
+  background-color: #EDFAF8;
+
+}
+.btn {
+  width: fit-content;
+}
+._lock {
+  overflow: hidden !important;
+}
+.btn-reset {
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.main {
+  flex: 1 1 auto;
+}
+[class*="__container"] {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 65px;
+  @include desk {
+    padding: 0 45px;
+  }
+  @include middletablet {
+    padding: 0 20px;
+  }
+  @include middlemobile {
+    padding: 0 10px;
+  }
+  // @media (max-width:1350px) {
+  //   padding: 0 20px;
+  // }
+}
+.container-sm {
+  padding: 0px 10px 10px 10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.67%;
+}
+.col-3 {
+  width: 24.99%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 46.47%;
+}
+.col-49 {
+  width: 49%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+} 
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.67%;
+}
+.col-12 {
+  width: 100%;
+}
+
+.section {
+  padding-bottom: 150px;
+  @include middledesk {
+    padding-bottom: 90px;
+  }
+  @include middletablet {
+    padding-bottom: 60px;
+  }
+  @include middlemobile {
+    padding-bottom: 50px;
+  }
+}
+
+.section__title {
+  color: var(--color-primary);
+  font-family: "Bebas";
+  font-size: 64px;
+  margin-bottom: 40px;
+  line-height: 120%;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  @include middledesk {
+    font-size: 40px;
+  }
+  @media (max-width:800px) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  @media (max-width:600px) {
+    font-size: 22px;
+  }
+}
+.section__subtitle {
+  color: var(--color-hunter);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 120%;
+  display: block;
+  @media (max-width:600px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+.section__descr {
+  font-size: 18px;
+  line-height: 140%;
+  max-width: 490px;
+  // margin-bottom: 20px;
+  @media (max-width:600px) {
+    font-size: 16px;
+  }
+  @media (max-width:500px) {
+    font-size: 14px;
+  }
+}
+.section__wrapper {
+  margin-bottom: 30px;
+}
+.btn {
+  display: block;
+  padding: 14px 30px;
+  border-radius: 15px;
+  color: #FFF;
+  font-family: "GP";
+  font-weight: 500;
+  line-height: 120%; 
+  flex-shrink: 0;
+  transition: all 0.3s ease 0s;
+  @include middlemobile {
+    font-size: 12px;
+  }
+  @media (max-width:600px) {
+    
+    font-size: 12px;
+  }
+  &-accent {
+    background-color: var(--color-accent);
+  }
+  &-primary {
+    background-color: #058842;
+  }
+  &-stroke {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    &:hover {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  }
+}
+.accent {
+  color: var(--color-accent);
+}
+.current {
+  color: var(--color-accent);
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.block-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    // margin-bottom: 30px;
+    padding-bottom: 30px;
+    @media (max-width:600px) {
+      gap: 20px;
+    }
+    &__price {
+      
+    }
+    span {
+      color: #FFF;
+      font-weight: 500;
+      line-height: 140%; /* 22.4px */
+    }
+}
+.modal__heading {
+  color: #006D33;
+  font-family: "Bebas";
+  font-size: 64px;
+  line-height: 120%;
+  letter-spacing: 1.92px;
+  @media (max-width:600px) {
+    font-size: 32px;
+  }
+}
+.acrd-open .block-info {
+  margin-bottom: 30px;
+  @media (max-width:600px) {
+    margin-bottom: 0px;
+  }
+}

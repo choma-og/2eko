@@ -1,0 +1,100 @@
+.order-service {
+ &__form {
+  margin-top: 30px;
+ }
+ &__select {
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  padding: 15px 40px 15px 20px;
+  border-radius: 14px;
+  border: 1px solid #75847C;
+  opacity: 0.8;
+  color: #192D18;
+  font-family: "GP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  @media (max-width:600px) {
+    font-size: 14px;
+  }
+  /* 19.2px */
+ }
+}
+.order__descr {
+ position: absolute;
+ top: -17px;
+ left: 0;
+ // color: #75847C;
+ font-family: "GP";
+ font-size: 12px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 100%;
+ color: #75847C;
+ opacity: 0.8;
+}
+.select__wrapper {
+ position: relative;
+ &::before {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  content: url("/public/img/vector-order.png");
+ }
+}
+  .order__body {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba($color: #000000, $alpha: 0.3);
+   left: 0;
+   top: 0;
+   z-index: 110;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease 0s;
+ 
+   &._active {
+    opacity: 1;
+    visibility: visible;
+   }
+  }
+  .order__content {
+   position: relative;
+   background-color: #EDFAF8;
+   border-radius: 40px;
+   padding: 80px 50px 100px 80px;
+   width: 764px;
+   display: none;
+   flex-direction: column;
+   @media (max-width:600px) {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 80px 20px 100px 20px;
+    border-radius: 0;
+   }
+
+   &._active {
+    display: flex;
+   }
+  }
+  .order__close {
+    padding: 10px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    @media (max-width:600px) {
+      right: 20px;
+      top: 20px;
+    }
+    cursor: pointer;
+  }

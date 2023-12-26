@@ -1,0 +1,49 @@
+<div class="order-service">
+ <div class="order-service__body order__body">
+  <div class="order-service__content order__content">
+   <div class="order__close">
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+     <path d="M1.48528 0.514719L18.4558 17.4853M18.4558 0.514719L1.48528 17.4853" stroke="#75847C" stroke-linecap="round"
+      stroke-linejoin="round" />
+    </svg>
+   </div>
+   <span class="modal__heading">Заказать услугу</span>
+   <form class="js-form order-service__form">
+    <div class="contacts-form__wrapper">
+     <span class="order__descr">Услуга</span>
+     <div class="select__wrapper">
+      <select class="order-service__select" name="order-service" id="order-service">
+       <option value="1">Вывоз строительных отходов</option>
+       <option value="2">Вывоз промышленных
+        и производственных отходов</option>
+       <option value="3">Вывоз отходов лесопереработки</option>
+       <option value="4">Вывоз грунта, глины</option>
+       <option value="5">Вывоз отходов после сезонной уборки участков домов, дач, газонов</option>
+       <option selected value="6">Отходы не относящиеся к ТКО</option>
+      </select>
+     </div>
+     <div class="contacts__input wrapper__name">
+      <input name="user_name" class="contacts__name" type="text" id="contacts-name" data-type="text" placeholder=" ">
+      <label class="contacts-form__label" for="">Ваше имя</label>
+      <div class="validate__form-error validate__form-error--name js-error js-error-name">
+       <span>Перепроверьте корректность имени</span>
+      </div>
+     </div>
+     <div class="contacts__input wrapper__phone">
+   
+      <input data-mask="phone" name="user_phone" class="contacts__tel" data-type="phone" type="text" id="contacts-phone"
+       inputmode="text" placeholder=" ">
+      <label class="contacts-form__label" for="">Телефон</label>
+      <div class="validate__form-error validate__form-error--phone js-error js-error-phone">
+       <span>Перепроверьте корректность номера</span>
+      </div>
+     </div>
+    </div>
+    <div class="contacts__btns">
+     <button class="js-form-submit btn btn-reset btn-primary" type="submit">Заказать</button>
+     <p>Нажимая кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих <a href="#">персональных данных</a></p>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>

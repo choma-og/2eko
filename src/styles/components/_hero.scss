@@ -1,0 +1,171 @@
+.hero {
+  &__swiper {
+    position: relative;
+    border-radius: 40px 40px 0px 40px;
+    overflow: hidden;
+  }
+  &__exclude-1 {
+    pointer-events: none;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    z-index: 5;
+    @include middledesk {
+      width: 130px;
+    }
+    @media (max-width:600px) {
+      width: 80px;
+    }
+  }
+  &__pagination {
+    position: absolute;
+    left: 50% !important;
+    bottom: 30px !important;
+    transform: translate(-50%);
+    height: auto;
+    width: 150px !important;
+    @media (max-width:600px) {
+      bottom: 15px !important;
+    }
+    & .swiper-pagination-bullet {
+      background-color: white;
+      width: 14px;
+      height: 14px;
+    }
+    
+  }
+  &__box {
+    position: absolute;
+    bottom: 100px;
+    left: 55px;
+    z-index: 10;
+    @include middledesk {
+      left: 50px;
+      bottom: 50px;
+    }
+    @media (max-width:968px) {
+      left: 30px;
+      bottom: 60px;
+    }
+  }
+  &__exclude-2 {
+    pointer-events: none;
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    z-index: 5;
+    @include middledesk {
+        width: 130px;
+      }
+    @media (max-width:600px) {
+      width: 70px;
+    }
+  }
+  &__navigation {
+    bottom: 0px;
+    right: 0px;
+    left: initial;
+    top: initial;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #006D33;
+    @media (max-width:600px) {
+      display: none;
+    }
+    &.swiper-button-prev {
+      right: 45px;
+    } 
+  }
+}
+.swiper-hero {
+  &__container {
+
+  }
+  &__title {
+    max-width: 620px;
+    color: #FFF;
+    font-family: "Bebas";
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 100%; 
+    letter-spacing: 2.4px;
+    margin-bottom: 40px;
+    @include middledesk {
+      font-size: 40px;
+    }
+    @media (max-width:968px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width:800px) {
+      font-size: 34px;
+    }
+    @media (max-width:600px) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.hero .swiper-slide {
+  position: relative;
+  height: calc(100vh - 94px);
+  @include middledesk {
+    height: calc(80vh - 94px);
+  }
+  @media (max-width:968px) {
+    height: calc(70vh - 94px);
+  }
+  @media (max-width:600px) {
+    height: 450px;
+  }
+
+  // padding-top: 50%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+  }
+}
+.swiper-hero__title {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.swiper-slide-active  .swiper-hero__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+.swiper-hero__title .accent{
+  opacity: 0;
+  display: block;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: 0.4s;
+}
+
+.swiper-slide-active .swiper-hero__title .accent{
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero__box .btn {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: 0.6s;
+}
+.swiper-slide-active .hero__box .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
